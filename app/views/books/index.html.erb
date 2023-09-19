@@ -7,7 +7,7 @@
   <%= form_with url: books_path, method: :get, local:false do |form| %>
   <div class="field">
     <%= form.label :keyword %>
-    <%= form.text_field :keyword %>
+    <%= form.text_field :keyword, class:"search-word" %>
   </div>
   <div class="actions">
     <%= form.submit "検索" %>
