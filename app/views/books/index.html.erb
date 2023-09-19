@@ -1,0 +1,29 @@
+<%= render "index", books: @books%>
+
+<div class="search-form">
+  <%= form_with url: books_path, method: :get do |form| %>
+  <div class="field">
+    <%= form.label :keyword %>
+    <%= form.text_field :keyword %>
+  </div>
+  <div class="actions">
+    <%= form.submit "検索" %>
+  </div>
+  <% end %>
+</div>
+
+<div class="book-form">
+  <%= form_with model: @book, local: true do |form| %>
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+  <% end %>
+</div>

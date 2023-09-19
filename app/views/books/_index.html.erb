@@ -1,0 +1,12 @@
+<div class="book-index">
+  <% books.each do |book| %>
+    <div class="book">
+      <div class="book_title">
+        <%= book.title %>
+      </div>
+      <div class="book_body">
+        <%= book.body %>
+      </div>
+    </div>
+  <% end %>
+</div>
