@@ -1,6 +1,7 @@
 <p>商品検索</p>
+<%= flash["notice"] %>
 <div>
-  <%= form_with url: root_path, method: :get do |f| %>
+  <%= form_with url: search_path, method: :get do |f| %>
     <%= f.text_field :keyword , class: 'form-control' %>
     <%= f.submit '検索' %>
   <%- end %>
