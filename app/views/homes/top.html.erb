@@ -9,5 +9,12 @@
 
 
 <% @items.each do |item| %>
-<p><%= item.name %></p>
+  <% if item["mediumImageUrls"].first.empty? %>
+    <p>No image</p>
+  <% else %>
+    <p><%= image_tag item["mediumImageUrls"].first, size: "128x128" %></p>
+  <% end %>
+  <p><%= item["itemName"] %></p>
+  <p><%= item["catchcopy"] %></p>
+  <p><%= item["itemPrice"] %></p>
 <% end %>

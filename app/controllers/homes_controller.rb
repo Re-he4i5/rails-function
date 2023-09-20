@@ -1,7 +1,7 @@
 class HomesController < ApplicationController
   def top
     keyword = "Rails"
-    @items = RakutenWebService::Ichiba::Item.search(keyword:  keyword)
+    @items = RakutenWebService::Ichiba::Item.search(keyword: keyword)
   end
 
   def search
@@ -9,11 +9,10 @@ class HomesController < ApplicationController
     if keyword.size < 2
       flash[:notice] = "2文字以上入力してください"
       keyword = "Rails"
-      @items = RakutenWebService::Ichiba::Item.search(keyword:  keyword)
+      @items = RakutenWebService::Ichiba::Item.search(keyword: keyword)
       render 'top'
     else
-      @items = RakutenWebService::Ichiba::Item.search(keyword:  keyword)
-      # render json: { items: @items }
+      @items = RakutenWebService::Ichiba::Item.search(keyword: keyword)
       render 'top'
     end
   end
