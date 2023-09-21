@@ -1,0 +1,22 @@
+<p>商品検索</p>
+<%= flash["notice"] %>
+<div>
+  <%= form_with url: root_path, method: :get do |f| %>
+    <%= f.text_field :keyword , class: 'form-control' %>
+    <%= f.submit '検索' %>
+  <%- end %>
+</div>
+
+<% if @items.present? %>
+  <% @items.each do |item| %>
+    <% if item["mediumImageUrls"].first.empty? %>
+      <p>No image</p>
+    <% else %>
+      <p><%= image_tag item["mediumImageUrls"].first, size: "128x128" %></p>
+    <% end %>
+    <p>商品名:<%= item["itemName"] %></p>
+    <p>値段:<%= item["itemPrice"] %>円</p>
+  <% end %>
+
+  <%= paginate @items %>
+<% end %>
