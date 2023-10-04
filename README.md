@@ -1,24 +1,7 @@
-# README
+# rails を用いた機能実装
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## フォントの設定
 
-Things you may want to cover:
+## rakuten api の導入
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## rakuten api ✖︎ kaminari の導入
