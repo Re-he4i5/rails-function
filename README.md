@@ -5,3 +5,5 @@
 ## rakuten api の導入
 
 ## rakuten api ✖︎ kaminari の導入
+
+## simple_calendar の導入
