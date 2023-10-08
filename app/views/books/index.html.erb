@@ -1,0 +1,21 @@
+<div>一覧</div>
+
+<% @books.each do |book| %>
+  <%= book.title %>
+  <%= book.body %>
+  <%= link_to '詳細', book_path(book) %>
+  <% book.image.each do |image| %>
+    <%= image_tag image %>
+    <% end %>
+<% end %>
+
+<div>投稿</div>
+<%= form_with model:@book, local: true do |form| %>
+  <div>タイトル</div>
+  <%= form.text_field :title %>
+  <div>内容</div>
+  <%= form.text_area :body %>
+  <div>画像</div>
+  <%= form.file_field :image, multiple: true %>
+  <%= form.submit %>
+<% end %>
