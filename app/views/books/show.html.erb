@@ -1,0 +1,8 @@
+<div>詳細</div>
+
+<%= @book.title %>
+<%= @book.body %>
+<%= link_to '詳細', book_path(@book) %>
+<% @book.image.each do |image| %>
+  <%= image_tag image %>
+  <% end %>
