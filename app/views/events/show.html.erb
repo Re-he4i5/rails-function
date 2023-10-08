@@ -1,0 +1,13 @@
+<div>詳細予定</div>
+
+<div>タイトル</div>
+<%= @event.title %>
+
+<div>内容</div>
+<%= @event.content %>
+
+<div>開始時間</div>
+<%= @event.start_time.strftime("%m-%d %H:%M") %>
+
+<div>終了時間</div>
+<%= @event.end_time.strftime("%m-%d %H:%M") %>
