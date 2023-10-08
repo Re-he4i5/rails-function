@@ -31,3 +31,16 @@
 
 <div>カレンダー</div>
 <%= link_to "カレンダーを見る", events_path %> 
+
+
+<div>
+  <%= link_to "新規登録", new_customer_registration_path %>
+</div>
+
+<div>
+<%= link_to "ログイン", new_customer_session_path %>
+</div>
+
+<div>
+  <%= link_to 'ゲストでログインする', customers_guest_sign_in_path, method: :post %>
+</div>
