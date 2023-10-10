@@ -8,4 +8,6 @@
 
 ## simple_calendar の導入
 
-## gest　ログイン
+## full_calendar の導入
+
+## gest 　ログイン
