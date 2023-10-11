@@ -7,3 +7,5 @@
 ## rakuten api ✖︎ kaminari の導入
 
 ## simple_calendar の導入
+
+## gest　ログイン
